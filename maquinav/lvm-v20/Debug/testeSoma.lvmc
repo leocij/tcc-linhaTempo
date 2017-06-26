@@ -1,0 +1,86 @@
+{ int a b c d e soma }
+# a - [00000000h]
+# b - [00000004h]
+# c - [00000008h]
+# d - [0000000ch]
+# e - [00000010h]
+# soma - [00000014h]
+
+
+{ mostra "Digite A: " }
+# mov strControl, [00000018h]
+# mov saida, strControl
+
+{ le a }
+# mov [00000000h], bufferInt
+
+{ mostra "Digite B: " }
+# mov strControl, [00000023h]
+# mov saida, strControl
+
+{ le b }
+# mov [00000004h], bufferInt
+
+{ mostra "Digite C: " }
+# mov strControl, [0000002eh]
+# mov saida, strControl
+
+{ le c }
+# mov [00000008h], bufferInt
+
+{ mostra "Digite D: " }
+# mov strControl, [00000039h]
+# mov saida, strControl
+
+{ le d }
+# mov [0000000ch], bufferInt
+
+{ mostra "Digite E: " }
+# mov strControl, [00000044h]
+# mov saida, strControl
+
+{ le e }
+# mov [00000010h], bufferInt
+
+
+{ = soma { + a { + b { + c { + d e } } } } }
+# mov intControl, [00000010h]
+# add intControl, [0000000ch]
+# add intControl, [00000008h]
+# add intControl, [00000004h]
+# add intControl, [00000000h]
+# mov [00000014h], intControl
+
+
+{ int resultado }
+# [0000004fh]
+
+{ = resultado soma }
+# mov intControl, [00000014h]
+# mov [0000004fh], intControl
+
+{ mostra { . "Resultado: " resultado } }
+# mov strControl, [0000004fh]
+# concat strControl, [00000053h]
+# mov saida, strControl
+
+# ba ba ba be
+# 00 00 00 00
+# 00 00 00 00
+
+#
+
+# [0] 00 00 00 00
+# [4] 00 00 00 00
+# [8] 00 00 00 00
+# [12] 00 00 00 00
+# [16] 00 00 00 00
+# [20] 00 00 00 00
+# [24] D i g i t e - A : - 00
+# [35] D i g i t e - B : - 00
+# [46] D i g i t e - C : - 00
+# [57] D i g i t e - D : - 00
+# [68] D i g i t e - E : - 00
+# [79] 00 00 00 00
+# [83] R e s u l t a d o : - 00
+# [95] ff

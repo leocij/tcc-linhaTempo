@@ -1,0 +1,13 @@
+mov strControl, [00000000h]
+mov [00000000h], strControl
+
+mov strControl, [0000000Eh]
+concat strControl, [00000010h]
+concat strControl, [00000017h]
+concat strControl, [00000019h]
+concat strControl, [0000001Dh]
+concat strControl, [0000001Fh]
+concat strControl, [00000023h]
+concat strControl, [00000025h]
+mov [00000000h], strControl
+

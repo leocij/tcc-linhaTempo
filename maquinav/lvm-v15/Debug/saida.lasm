@@ -1,0 +1,36 @@
+[00000000h] 
+[00000004h] 
+[00000008h] 
+
+mov eax, 00000000h
+mov [00000000h], eax
+
+mov eax, 00000000h
+mov [00000004h], eax
+
+mov eax, 00000000h
+mov [00000008h], eax
+
+mov eax, 0000000Ah
+cmp eax, 00000000h
+jump jge, 0000000Ch
+mov eax, 0000000Ah
+cmp eax, 00000004h
+jump jge, 00000010h
+mov eax, [00000004h]
+add eax, [00000000h]
+add eax, [00000008h]
+mov [00000008h], eax
+
+mov eax, 00000001h
+add eax, [00000004h]
+mov [00000004h], eax
+
+jump laco, 00000042h
+
+mov eax, 00000001h
+add eax, [00000000h]
+mov [00000000h], eax
+
+jump laco, 0000006Ch
+

@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;lvm-v19/Debug/src/lvm-v19.o&apos;" deleteContents="false" description="Delete resource &apos;lvm-v19/Debug/src/lvm-v19.o&apos;" element1="/lvm-v19/Debug/src/lvm-v19.o" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1490579446201"/>
+</session>

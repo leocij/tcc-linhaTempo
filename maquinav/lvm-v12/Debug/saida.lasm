@@ -1,0 +1,25 @@
+[00000000h] 
+
+mov eax, 0000000Ah
+mov [00000000h], eax
+
+  if( var1 > 5 ){
+  mov eax, 00000005h
+mov [00000000h], eax
+
+  if( var1 > 5 ){
+  mov eax, 00000005h
+mov [00000000h], eax
+
+  }else{
+  mov eax, 00000014h
+mov [00000000h], eax
+
+  }
+
+  }else{
+  mov eax, 00000014h
+mov [00000000h], eax
+
+  }
+

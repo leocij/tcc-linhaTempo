@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;Instrucao.java&apos; to &apos;compilador-v19/src/compilador&apos;&#x0D;&#x0A;- Original project: &apos;compilador-v18&apos;&#x0D;&#x0A;- Destination element: &apos;compilador-v19/src/compilador&apos;&#x0D;&#x0A;- Original element: &apos;compilador.Instrucao.java&apos;" description="Copy compilation unit" destination="=compilador-v19/src&lt;compilador" element1="/src&lt;compilador{Instrucao.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1490569684189" units="1" version="1.0"/>
+</session>

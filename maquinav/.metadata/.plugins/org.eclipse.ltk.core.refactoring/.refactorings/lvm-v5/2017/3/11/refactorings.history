@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;lvm-v5/src/lvm-v4.c&apos; to &apos;lvm-v5.c&apos;" description="Rename resource &apos;lvm-v4.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/lvm-v4.c" name="lvm-v5.c" stamp="1489404110782" updateReferences="true"/>
+</session>

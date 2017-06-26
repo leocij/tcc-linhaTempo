@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;tamDados&apos; in &apos;compilador.Simbolo&apos; to &apos;tamVariavel&apos;&#x0D;&#x0A;- Original project: &apos;compilador-v11&apos;&#x0D;&#x0A;- Original element: &apos;compilador.Simbolo.tamDados&apos;&#x0D;&#x0A;- Renamed element: &apos;compilador.Simbolo.tamVariavel&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;tamDados&apos;" flags="589826" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;compilador{Simbolo.java[Simbolo^tamDados" name="tamVariavel" references="true" setter="false" stamp="1489855592373" textual="false" version="1.0"/>
+</session>

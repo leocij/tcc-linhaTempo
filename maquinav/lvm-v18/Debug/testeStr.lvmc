@@ -1,0 +1,4 @@
+{ texto txt }
+
+{ = txt "a\na\ta\\a\n" }
+{ mostra txt }

@@ -1,0 +1,39 @@
+# Fatorial em SCP (Script de chaves em portugues)
+
+{ int n fat i }
+# [00000000h] [00000004h] [00000008h]
+
+{ = n 5 }
+# (mov-reg-const) (mov-mem-reg)
+# mov eax, 0x00000005h | mov [00000000h], eax
+# 01 01 00 00 00 05 | 02 01 00 00 00 00
+
+{ = fat 1 }
+# (mov-reg-const) (mov-mem-reg)
+# mov eax, 0x00000001h | mov [00000004h], eax
+# 01 01 00 00 00 01 | 02 01 00 00 00 04
+
+{ = i 1 }
+# (mov-reg-const) (mov-mem-reg)
+# mov eax, 0x00000001h | mov [00000008h], eax
+# 01 01 00 00 00 01 | 02 01 00 00 00 08
+
+{ enquanto { <= i n }
+# (mov-reg-mem) (cmp-reg-mem) (jump)
+# mov eax, [00000000h] | cmp eax, [00000008h] | jump jg, [0000000Ch]
+# 03 01 00 00 00 00 | 05 01 00 00 00 08 | 06 01 00 00 00 2A
+
+	{ = fat { * fat i } }
+# (mov-reg-mem) (mult-reg-mem) (mov-reg-mem)
+# mov eax, [00000008h] | mult eax, [00000004h] | mov [00000004h], eax
+# 03 01 00 00 00 08 | 07 01 00 00 00 04 | 02 01 00 00 00 04
+	
+	
+	{ = i { + i 1 } }
+# (mov-reg-const) (add-reg-mem) (mov-mem-reg) (jump)
+# mov eax, 0x00000001h | add eax, [00000008h] | mov [00000008h], eax | jump laco, [00000024h]
+# 01 01 00 00 00 01 | 04 01 00 00 00 08 | 02 01 00 00 00 08 | 06 08 00 00 00 30
+	
+}
+
+# 3132799678 96 12

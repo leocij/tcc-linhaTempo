@@ -1,0 +1,10 @@
+{ int var1 }
+{ = var1 10 }
+{ int var2 }
+{ = var2 20 }
+{ texto txt1 }
+{ = txt1 "0123456789" }
+{ texto txt2 }
+{ = txt2 "123456789" }
+{ mostra "Digite um numero para A: " }
+# { mostra { . "O valor de A: " a } }

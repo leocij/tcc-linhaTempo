@@ -1,0 +1,12 @@
+{ int a }
+{ texto txt }
+
+{ = a 10 }
+
+{ = txt "Hello\n" }
+
+{
+se { > a 5 }
+{ { mostra txt } }
+{ { mostra a } }
+}

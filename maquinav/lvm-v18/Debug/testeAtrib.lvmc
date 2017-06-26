@@ -1,0 +1,54 @@
+# (magic world) ba ba ba be
+# (tamInstrucoes} 00 00 00 00
+# (tamDados) 00 00 00 00
+
+{ int a b soma }
+# a - [00000000h]
+# b - [00000004h]
+# soma - [00000008h]
+
+{ mostra "Digite a: " }
+# mov string, [0000000Ch]
+# mov saida, string
+
+{ le a }
+# mov [00000000h], bufferInt
+
+{ mostra "Digite b: " }
+# mov string, [00000017h]
+# mov saida, string
+
+{ le b }
+# mov [00000000h], bufferInt
+
+{ = soma { + a b } }
+# mov eax, [00000004h]
+# add eax, [00000000h]
+# mov [00000008h], eax
+
+{ mostra { . "O valor da Soma: " soma } }
+# mov string, [00000008h]
+# concat string, [00000022h]
+# mov saida, string
+
+
+
+
+
+# ba ba ba be
+# 00 00 00 00
+# 00 00 00 00
+
+
+# 00 00 00 00
+# 00 00 00 00
+# 00 00 00 00
+# D i g i t e - a : - 00
+# D i g i t e - b : - 00
+# O - v a l o r - d a - s o m a : - 00
+
+
+
+
+ 
+

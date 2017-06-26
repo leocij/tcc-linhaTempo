@@ -1,0 +1,11 @@
+{ int a b soma }
+
+{ mostra "Digite A: " }
+{ le a }
+
+{ mostra "Digite B: " }
+{ le b }
+
+{ = soma { + a b } }
+
+{ mostra { . "Soma = " soma } }

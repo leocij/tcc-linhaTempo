@@ -1,0 +1,4 @@
+{ int a }
+{ mostra "Digite um numero para A: " }
+{ le a }
+{ mostra { . a { . " foi digitado agora -> " { . a "\n" } } } }

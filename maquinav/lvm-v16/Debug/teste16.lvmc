@@ -1,0 +1,19 @@
+{ int a b soma i }
+{ = a 10 }
+{ = b 20 }
+{ = soma { + a b } }
+{
+se { > soma a }
+    {
+        { = i 0 }
+        {
+        enquanto { < i soma }
+           { mostra i }
+           { = i { + i 1 } }
+        }
+    }
+
+    {
+        { mostra a }
+    }
+}

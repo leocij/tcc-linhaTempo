@@ -1,0 +1,19 @@
+{ int i n fat }
+
+{ mostra "Digite um N > 0: " }
+{ le n }
+
+{
+  se { <= n 0 }
+  { { mostra "N invalido!\n" } }
+  {
+    { = i 1 }
+    { = fat 1 }
+    {
+      enquanto { <= i n }
+        { = fat { * fat i } }
+        { = i { + i 1 } }
+    }
+    { mostra { . "Fatorial de " { . n { . " = " { . fat "\n" } } } } }
+  }
+}

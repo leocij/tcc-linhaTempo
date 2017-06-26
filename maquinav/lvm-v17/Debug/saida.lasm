@@ -1,0 +1,62 @@
+[00000000h] 
+[00000004h] 
+[00000008h] 
+[0000000Ch] 
+[00000010h] 
+[00000014h] 
+
+[00000018h] 
+[0000001Ch] 
+[00000020h] 
+[00000024h] 
+[00000028h] 
+
+mov string, [00000018h]
+mov [00000018h], string
+
+mov string, [0000001Ch]
+mov [0000001Ch], string
+
+mov string, [00000020h]
+mov [00000020h], string
+
+mostra tela, [0000002Ch]
+
+mostra tela, [0000003Ah]
+
+mostra tela, [00000045h]
+
+mov eax, 0000000Ah
+mov [00000000h], eax
+
+mov eax, 00000014h
+mov [00000004h], eax
+
+mov eax, 0000001Eh
+mov [00000008h], eax
+
+mov eax, 00000028h
+mov [0000000Ch], eax
+
+mov eax, 00000032h
+mov [00000010h], eax
+
+mov eax, [00000010h]
+add eax, [0000000Ch]
+add eax, [00000008h]
+add eax, [00000004h]
+add eax, [00000000h]
+mov [00000014h], eax
+
+mov string, [00000024h]
+mov [00000024h], string
+
+mostra tela, [00000050h]
+
+mostra tela, [00000014h]
+
+mov string, [00000028h]
+mov [00000028h], string
+
+mostra tela, [00000060h]
+

@@ -1,0 +1,7 @@
+00:42:12 **** Incremental Build of configuration Debug for project lvm-v14 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\lvm.o" "..\\src\\lvm.c" 
+gcc -o lvm-v14.exe "src\\lvm.o" 
+
+00:42:13 Build Finished (took 1s.320ms)
+

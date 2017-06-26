@@ -1,0 +1,35 @@
+{ int a b soma }
+{ texto txt1 txt2 txt3 txt4 txt5 txt6 }
+{ = txt1 "\n" }
+{ = txt2 "Digite um numero para A: " }
+{ = txt3 "Digite um numero para B: " }
+{ = txt4 "O valor da Soma de A e B: " }
+
+{ mostra txt2 }
+{ le a }
+
+{ mostra txt3 }
+{ le b }
+
+{ = soma { + a b } }
+
+{ mostra txt1 }
+
+{ = txt5 "O valor de A: " }
+{ mostra txt5 }
+{ mostra a }
+
+{ mostra txt1 }
+{ mostra txt1 }
+
+{ = txt6 "O valor de B: " }
+{ mostra txt6 }
+{ mostra b }
+
+{ mostra txt1 }
+{ mostra txt1 }
+
+{ mostra txt4 }
+{ mostra soma }
+
+{ mostra txt1 }

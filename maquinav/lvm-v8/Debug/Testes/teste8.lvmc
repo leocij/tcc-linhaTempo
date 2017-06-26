@@ -1,0 +1,28 @@
+{ int var1 }
+[00000000h]
+
+{ = var1 10 }
+# (mov-reg-const) (mov-mem-reg)
+# mov eax, 0x0000000Ah | mov [00000000h], eax
+# 01 01 00 00 00 0A | 02 01 00 00 00 00
+
+{ se { > var1 5 }
+# (mov-reg-const) (cmp-reg-mem) (jump)
+# mov eax, 0x00000005h | cmp eax, [00000000h] | jump jle, [0000000Ch]
+# 01 01 00 00 00 05 | 05 01 00 00 00 00 | 06 04 00 00 00 12
+
+  { { = var1 5 } }
+# (mov-reg-const) (mov-mem-reg) (jump)
+# mov eax, 0x00000005h | mov [00000000h], eax | jump fimse, [0000000Ch]
+# 01 01 00 00 00 05 | 02 01 00 00 00 00 | 06 07 00 00 00 0C
+
+  { { = var1 20 } }
+# (senao:) mov eax, 0x00000014h | mov [00000000h], eax
+# 01 01 00 00 00 14 | 02 01 00 00 00 00
+
+# (fimse:)
+  
+}
+
+
+# 3132799678 00 00 00 3C 00 00 00 04

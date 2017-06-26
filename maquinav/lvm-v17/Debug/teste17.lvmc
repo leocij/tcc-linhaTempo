@@ -1,0 +1,19 @@
+{ int a b c d e soma }
+{ texto txt1 txt2 txt3 saida nlinha }
+{ = txt1 "Hello World!\n" }
+{ = txt2 "Deu certo\n" }
+{ = txt3 "Agora vai\n" }
+{ mostra txt1 }
+{ mostra txt2 }
+{ mostra txt3 }
+{ = a 10 }
+{ = b 20 }
+{ = c 30 }
+{ = d 40 }
+{ = e 50 }
+{ = soma { + a { + b { + c { + d e } } } } }
+{ = saida "Valor de soma: " }
+{ mostra saida }
+{ mostra soma }
+{ = nlinha "\n" }
+{ mostra nlinha }

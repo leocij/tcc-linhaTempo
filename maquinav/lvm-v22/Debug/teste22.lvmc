@@ -1,0 +1,15 @@
+{ int i }
+{ = i 0 }
+
+{
+  enquanto { < i 5 }
+    { int j }
+    { = j 0 }
+    {
+      enquanto { < j 5 }
+        { mostra { . "(" { . i { . "," { . j ") " } } } } }
+        { = j { + j 1 } }
+    }
+   { mostra "\n" }
+    { = i { + i 1 } }
+}

@@ -1,0 +1,40 @@
+[00000000h] 
+
+mov intControl, 00000000h
+mov [00000000h], intControl
+
+mov intControl, 00000005h
+cmp intControl, [00000000h]
+jump jge, 00000004h
+
+[00000008h] 
+
+mov intControl, 00000000h
+mov [00000008h], intControl
+
+mov intControl, 00000005h
+cmp intControl, [00000008h]
+jump jge, 0000000Ch
+
+mov strControl, [00000010h]
+concat strControlConvert, [00000008h]
+concat strControl, [00000013h]
+concat strControlConvert, [00000000h]
+concat strControl, [00000015h]
+int 00000000h, strControl
+
+mov intControl, 00000001h
+add intControl, [00000008h]
+mov [00000008h], intControl
+
+jump laco, 0000004Eh
+
+mov strControl, [00000017h]
+int 00000000h, strControl
+
+mov intControl, 00000001h
+add intControl, [00000000h]
+mov [00000000h], intControl
+
+jump laco, 00000090h
+

@@ -1,0 +1,19 @@
+{ int var1 var2 soma }
+# [00000000h] [00000004h] [00000008h]
+
+{ = var1 10 }
+# (mov-reg-const) (mov-mem-reg)
+# mov eax, 0x0000000Ah | mov [00000000h], eax
+# 01 01 00 00 00 0A | 02 01 00 00 00 00
+
+{ = var2 20 }
+# (mov-reg-const) (mov-mem-reg)
+# mov eax, 0x00000014h | mov [00000004h], eax
+# 01 01 00 00 00 14 | 02 01 00 00 00 04
+
+{ = soma { + var1 var2 } }
+# (mov-reg-mem) (add-reg-mem) (mov-mem-reg)
+# mov eax, [00000004h] | add eax, [00000000h] | mov [00000008h], eax
+# 03 01 00 00 00 04 | 04 01 00 00 00 00 | 02 01 00 00 00 08
+
+# 3132799678 

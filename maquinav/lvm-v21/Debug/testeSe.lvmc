@@ -1,0 +1,21 @@
+{
+  se { != 5 5 }
+  { 
+    { mostra "se 1.\n" }
+    {
+      se { != 6 6 }
+      { { mostra "se 2.\n" } }
+
+      { { mostra "senao 2.\n" } }
+    }
+  }
+  {
+    { mostra "senao 1.\n" }
+    {
+      se { != 6 6 }
+      { { mostra "se 3.\n" } }
+
+      { { mostra "senao 3.\n" } }
+    }
+  }
+}

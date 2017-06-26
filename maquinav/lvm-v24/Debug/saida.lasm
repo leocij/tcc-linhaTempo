@@ -1,0 +1,3 @@
+mov strControl, [00000000h]
+int 00000000h, strControl
+

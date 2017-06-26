@@ -1,0 +1,48 @@
+{ int a b soma }
+# a - [00000000h]
+# b - [00000004h]
+# soma - [00000008h]
+
+{ mostra "Digite A: " }
+# mov strControl, [0000000Ch]
+# mov saida, strControl
+
+{ le a }
+# mov [00000000h], bufferInt
+
+{ mostra "Digite B: " }
+# mov strControl, [00000017h]
+# mov saida, strControl
+
+{ le b }
+# mov [00000004h], bufferInt
+
+{ = soma { + a b } }
+# mov intControl, [00000004h]
+# add intControl, [00000000h]
+# mov [00000008h], intControl
+
+{ mostra { . "O valor da Soma: " soma } }
+# mov strControl, [00000008h]
+# concat strControl, [00000022h]
+# mov saida, strControl
+
+# ba ba ba be
+# 00 00 00 00
+# 00 00 00 00
+
+# 
+
+# [0] 00 00 00 00
+# [4] 00 00 00 00
+# [8] 00 00 00 00
+# [12] D i g i t e - a : - 00
+# [23] D i g i t e - b : - 00
+# [34] O - v a l o r - d a - s o m a : - 00
+# [52] ff
+
+
+
+
+ 
+

@@ -1,0 +1,7 @@
+15:12:08 **** Incremental Build of configuration Debug for project lvm-v20 ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\lvm-v20.o" "..\\src\\lvm-v20.c" 
+gcc -o lvm-v20.exe "src\\lvm-v20.o" 
+
+15:12:10 Build Finished (took 1s.639ms)
+

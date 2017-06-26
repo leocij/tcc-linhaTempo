@@ -1,0 +1,11 @@
+{ int var1 }
+
+{ = var1 10 }
+
+{ int var2 }
+
+{ = var2 20 }
+
+{ int soma }
+
+{ = soma { + var1 var2 } }

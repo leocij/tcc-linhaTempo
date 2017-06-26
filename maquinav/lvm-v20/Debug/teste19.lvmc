@@ -1,0 +1,2 @@
+{ mostra "Hello World!\n" }
+{ mostra { . "Acho" { . " " { . "que" { . " " { . "deu" { . " " { . "certo!" "\n" } } } } } } } }

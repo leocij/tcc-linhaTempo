@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy package &apos;compilador&apos; to &apos;compilador-v5/src&apos;&#x0D;&#x0A;- Original project: &apos;compilador-v4&apos;&#x0D;&#x0A;- Destination element: &apos;compilador-v5/src&apos;&#x0D;&#x0A;- Original element: &apos;compilador-v4/src/compilador&apos;" description="Copy package" destination="=compilador-v5/src" element1="/src&lt;compilador" flags="589830" fragments="1" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyPackages" stamp="1489403959366" version="1.0"/>
+</session>

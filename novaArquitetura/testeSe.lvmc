@@ -1,0 +1,114 @@
+{ int a b }
+# a - [00000000h]
+# b - [00000004h]
+
+{ mostra "Digite A: " }
+# mov strControl, [00000008h]
+# mov saida, strControl
+
+{ le a }
+# mov [00000000h], bufferInt
+
+{ mostra "Digite B: " }
+# mov strControl, [00000013h]
+# mov saida, strControl
+
+{ le b }
+# mov [00000004h], bufferInt
+{
+  se { > a b }
+  # mov intControl, [00000004h]
+  # cmp intControl, [00000000h]
+  # jump jle, [0000001e]
+
+  {
+    { int c d }
+    # c - [00000022h]
+    # d - [00000026h]
+
+    { mostra "Digite C: " }
+    # mov strControl, [0000002ah]
+    # mov saida, strControl
+
+    { le c }
+    # mov [00000022h], bufferInt
+
+    { mostra "Digite D: " }
+    # mov strControl, [00000035h]
+    # mov saida, strControl
+
+    { le d }
+    # mov [00000026h], bufferInt
+
+    {
+      se { > c d }
+      # mov intControl, [00000026h]
+      # cmp intControl, [00000022h]
+      # jump jle, [00000040h]
+
+      { { mostra "Se 1 verdade e SeDentro verdade\n" } }
+      # mov strControl, [00000044h]
+      # mov saida, strControl
+      # jump fimSe, [00000065h]
+
+      { { mostra "Se 1 verdade e SeDentro falso\n" } }
+      # mov strControl, [00000069h]
+      # mov saida, strControl
+    }
+  }
+  # jump fimSe, [0000008ch]
+  {
+    { int e f }
+    # e - [0000008ch]
+    # f - [00000090h]
+
+    { mostra "Digite E: " }
+    # mov strControl, [00000094h]
+    # mov saida, strControl
+
+    { le e }
+    # mov [0000008ch], bufferInt
+
+    { mostra "Digite F: " }
+    # mov strControl, [0000009fh]
+    # mov saida, strControl
+
+    { le f }
+    # mov [00000090h], bufferInt
+    {
+      se { > e f }
+      # mov intControl, [00000090h]
+      # cmp intControl, [0000008ch]
+      # jump jle, [000000aah]
+
+      { { mostra "Se 1 falso e SeDentro verdade\n" } }
+      # mov strControl, [000000aeh]
+      # mov saida, strControl
+      # jump fimSe, [000000cdh]
+
+    }
+  }
+}
+
+# [0] 00 00 00 00
+# [4] 00 00 00 00
+# [8] D i g i t e - A : - 00
+# [19] D i g i t e - B : - 00
+# [30] 00 00 00 5a
+# [34] 00 00 00 00
+# [38] 00 00 00 00
+# [42] D i g i t e - C : - 00
+# [53] D i g i t e - D : - 00
+# [64] 00 00 00 12
+# [68] S e - 1 - v e r d a d e - e - S e D e n t r o - v e r d a d e 0a 00
+# [101] 00 00 00 0c
+# [105] S e - 1 - v e r d a d e - e - S e D e n t r o - f a l s o 0a 00
+# [136] 00 00 00 00
+# [140] 00 00 00 48
+# [144] 00 00 00 00
+# [148] D i g i t e - E : - 00
+# [159] D i g i t e - F : - 00
+# [170] 00 00 00 12
+# [174] S e - 1 - f a l s o - e - S e D e n t r o - v e r d a d e 0a 00
+# [205] 00 00 00 00
+# [209] 

@@ -1,0 +1,29 @@
+{ int var1 }
+
+{ = var1 10 }
+# (mov-rInt1-nInt) (mov-mInt-rInt1)
+# 08 01 00 00 00 0A 03 00 00 00 00 01
+
+{ se { > var1 5 }
+# (se) (mov-rInt1-nInt) (mov-rInt2-mInt) (cmp-rInt2-rInt1) (jg-verdade-senao)
+# 04 08 01 00 00 00 05 11 02 00 00 00 00 10 02 01 01 05 06
+
+  { { = var1 5 } }
+# (verdade) (mov-rInt1-nInt) (mov-mInt-rInt1) (jump-fimse)
+# 08 01 00 00 00 05 03 00 00 00 00 01 02 00 00 00 0D
+  
+  { { = var1 20 } }
+# (senao) (mov-rInt1-nInt) (mov-mInt-rInt1)
+# 08 01 00 00 00 14 03 00 00 00 00 01
+
+# (fimSe)
+  
+}
+
+# (mov-rInt1-nInt) (mov-mInt-rInt1)
+# (se) (mov-rInt1-nInt) (mov-mInt-rInt2) (cmp-rInt2-rInt1)
+# (verdade) (mov-nInt-rInt1) (mov-mInt-rInt1)
+# (senao) (mov-nInt-rInt1) (mov-mInt-rInt1)
+# (fimSe)
+
+# 3132799678 60 4 8 1 0 0 0 10 3 0 0 0 0 1

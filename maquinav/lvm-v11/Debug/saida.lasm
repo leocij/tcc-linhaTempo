@@ -1,0 +1,29 @@
+[00000000h] 
+[00000004h] 
+[00000008h] 
+[0000000Ch] 
+[00000010h] 
+[00000014h] 
+
+mov eax, 0000000Ah
+mov [00000000h], eax
+
+mov eax, 00000014h
+mov [00000004h], eax
+
+mov eax, 0000001Eh
+mov [00000008h], eax
+
+mov eax, 00000028h
+mov [0000000Ch], eax
+
+mov eax, 00000032h
+mov [00000010h], eax
+
+mov eax, [00000010h]
+add eax, [0000000Ch]
+add eax, [00000008h]
+add eax, [00000004h]
+add eax, [00000000h]
+mov [00000014h], eax
+

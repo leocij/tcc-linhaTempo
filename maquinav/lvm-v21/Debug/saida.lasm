@@ -1,0 +1,36 @@
+mov intControl, 00000005h
+cmp intControl, 00000005h
+jump je, 00000000h
+mov strControl, [00000004h]
+int 00000000h, strControl
+
+mov intControl, 00000006h
+cmp intControl, 00000006h
+jump je, 0000000Bh
+mov strControl, [0000000Fh]
+int 00000000h, strControl
+
+jump fimse, 00000016h
+mov strControl, [0000001Ah]
+int 00000000h, strControl
+
+
+
+jump fimse, 00000024h
+mov strControl, [00000028h]
+int 00000000h, strControl
+
+mov intControl, 00000006h
+cmp intControl, 00000006h
+jump je, 00000032h
+mov strControl, [00000036h]
+int 00000000h, strControl
+
+jump fimse, 0000003Dh
+mov strControl, [00000041h]
+int 00000000h, strControl
+
+
+
+
+
